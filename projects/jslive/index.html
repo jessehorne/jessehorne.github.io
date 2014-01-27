@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Live</title>
+</head>
+
+<body>
+  <script>
+    // Function to read from 'area1', eval, and print to 'area2'
+    function run() {
+      document.getElementById('area2').value = eval(document.getElementById('area1').value.trim());
+    }
+  </script>
+  <h3>JavaScript Live</h3>
+  <h6>Type your JavaScript in the first text area, then watch the result in the second.</h6>
+  <table border="1">
+    <td>
+      <textarea onkeyup="run();" id="area1" rows="20" cols="50"></textarea>
+    </td>
+    <td>
+    <textarea id="area2" rows="20" cols="50"></textarea>
+    </td>
+  </table>
+
+</body>
+</html>
