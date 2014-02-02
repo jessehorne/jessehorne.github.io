@@ -18,7 +18,7 @@ var Player = function() {
 
   this.canFire = true;
   this.canFireTimer = 0;
-  this.rateOfFire = 0.2;
+  this.rateOfFire = 0.7;
   this.chanceOfUpgrade = 100;
   // Update
   this.update = function(dt) {
