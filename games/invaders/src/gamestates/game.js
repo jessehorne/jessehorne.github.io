@@ -226,7 +226,7 @@ game.onMousePressed = function(x, y, button) {
     // Facebook Button Mouse Pressed
     if (bbox(x, y, 1, 1, facebookX, facebookY, facebookW, facebookH)) {
       pause();
-      window.open("https://www.facebook.com/sharer/sharer.php?u=www.google.com",
+      window.open("https://www.facebook.com/sharer/sharer.php?u=http://jessehorne.github.io/games/invaders/",
                   "mywindow","menubar=1,resizable=1,width=350,height=250");
     }
 
