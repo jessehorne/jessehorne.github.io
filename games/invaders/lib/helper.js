@@ -16,5 +16,6 @@ newHighscoreEntry = function(p, r, t) {
 }
 
 saveHighscores = function() {
+  highscores.sort(function(a,b){ return b.points-a.points;});
   window.localStorage["highscores"] = JSON.stringify(highscores);
 }

@@ -33,6 +33,7 @@ gameOver = function() {
   // Save score n such
   newHighscoreEntry(player.points, player.round, seconds);
   saveHighscores();
+
   seconds = 0;
   currentGamestate = "gameover";
   gameoverTimer = 0;

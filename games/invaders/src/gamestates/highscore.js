@@ -17,7 +17,7 @@ highscore.draw = function() {
     luv.canvas.print(highscores[x].t.toFixed(), highscore.startX + 170, highscore.startY + highscore.spacer*x);
   }
   if (highscores.length == 0) {
-    luv.canvas.print("No entries...", highscore.startX + highscore.spacer, 20);
+    luv.canvas.print("No entries...", highscore.startX + highscore.spacer, 30);
   }
 }
 
