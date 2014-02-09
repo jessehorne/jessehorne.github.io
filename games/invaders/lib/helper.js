@@ -16,6 +16,8 @@ newHighscoreEntry = function(p, r, t) {
 }
 
 saveHighscores = function() {
-  highscores.sort(function(a,b){ return b.points-a.points;});
+  if (window.localStorage["highscores"]) {
+    highscores.sort(function(a,b){ return a.points-b.points;});
+  }
   window.localStorage["highscores"] = JSON.stringify(highscores);
 }

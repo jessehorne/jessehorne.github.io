@@ -104,8 +104,8 @@ luv.load = function() {
   shootEnemySound.setVolume(volume);
   hitSound.setVolume(volume);
 
-  music = luv.audio.Sound("src/assets/song.mp3");
-  music.setVolume(volume);
+  song1 = luv.audio.Sound("src/assets/song.mp3");
+  song1.setVolume(volume);
 
 };
 

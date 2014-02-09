@@ -52,7 +52,7 @@ menu.draw = function() {
     menu.buttons[2].img = creditsImg;
   }
   // Draw Logo
-  luv.canvas.draw(menuImg, (screenWidth - 300)/2, 10);
+  luv.canvas.draw(menuImg, (screenWidth - 300)/2, 50);
 
   // Draw Buttons
   for (var x=0; x<menu.buttons.length; x++) {
