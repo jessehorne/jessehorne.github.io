@@ -22,7 +22,7 @@ pause = function() {
   if (paused) {
     paused = false;
   } else {
-    music.stop();
+    song1.stop();
     paused = true;
   }
 }
@@ -38,13 +38,13 @@ gameOver = function() {
   currentGamestate = "gameover";
   gameoverTimer = 0;
 
-  music.stop()
+  song1.stop()
 
   if (!paused) { pause(); }
 }
 
 newGame = function() {
-  music.stop()
+  song1.stop()
   currentGamestate = "game";
   entities = [];
   seconds = 0;
@@ -95,8 +95,9 @@ game.update = function(dt) {
 
     if (player.round >= rounds.length) { gameOver(); return; }
 
-    // Music
+    // song1
     if (songPlaying == false) {
+      song1.play();
       songPlaying = true;
       songPaused = false;
     }
@@ -193,7 +194,7 @@ game.draw = function() {
   // Draw facebook
   luv.canvas.draw(facebookImg, facebookX, facebookY);
 
-  // Draw Music on/off
+  // Draw song1 on/off
   if (songPaused == true) {
     luv.canvas.draw(musicPausedImg, musicButtonX, musicButtonY);
   } else {
@@ -231,20 +232,20 @@ game.onMousePressed = function(x, y, button) {
                   "mywindow","menubar=1,resizable=1,width=350,height=250");
     }
 
-    // Music Button Mouse Pressed
+    // song1 Button Mouse Pressed
     if (bbox(x, y, 1, 1, musicButtonX, musicButtonY, 32 ,32)) {
       if (songPaused == true) {
         if (!paused) {
-          music.pause();
-          music.setVolume(volume);
-          music.play();
+          song1.pause();
+          song1.setVolume(volume);
+          song1.play();
           songPaused = false;
         }
       } else {
         if (!paused) {
-          music.pause();
-          music.setVolume(0);
-          music.play();
+          song1.pause();
+          song1.setVolume(0);
+          song1.play();
           songPaused = true;
         }
       }
@@ -254,12 +255,12 @@ game.onMousePressed = function(x, y, button) {
     if (bbox(x, y, 1, 1, gameButtonX, gameButtonY, 32 ,32)) {
       if (paused == true) {
         if (songPaused == true) {
-          music.play()
+          song1.play()
         }
         paused = false;
       } else {
         songPaused = true;
-        music.stop();
+        song1.stop();
         paused = true;
       }
     }
