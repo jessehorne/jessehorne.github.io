@@ -6,7 +6,7 @@ var Player = function() {
   this.h = 20;
 
   this.x = luv.canvas.getWidth()/2 - this.w/2;
-  this.y = screenHeight - (this.h+10);
+  this.y = screenHeight - (this.h+50);
 
   this.round = 0;
   this.points = 0;
@@ -74,14 +74,17 @@ var Player = function() {
   // Mouse Pressed
   this.onPressed = function(key) {
     if (key == " ") {
-      if (this.canFire) {
-        var b = new Bullet(this.x + (this.w/2), this.y, 5, 5, 300, "up", "player");
-        this.canFire = false;
-        shootPlayerSound.play();
-      }
+      this.fire();
     }
   };
 
+  this.fire = function() {
+    if (this.canFire) {
+      var b = new Bullet(this.x + (this.w/2), this.y, 5, 5, 300, "up", "player");
+      this.canFire = false;
+      shootPlayerSound.play();
+    }
+  };
   entities.push(this);
 
   this.upgrade = function() {

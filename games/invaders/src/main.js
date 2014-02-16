@@ -90,6 +90,8 @@ luv.load = function() {
   highscoreImg = luv.graphics.Image("src/assets/highscore.png");
   achievementImg = luv.graphics.Image("src/assets/achievement.png");
 
+  controlsImg = luv.graphics.Image("src/assets/controls.png");
+
   spaceImg = luv.graphics.Image("src/assets/space.jpg"); // Background Image
 
   upgradeImg = luv.graphics.Image("src/assets/speedupgrade.png");
