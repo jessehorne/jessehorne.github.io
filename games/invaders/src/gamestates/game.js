@@ -186,9 +186,6 @@ game.draw = function() {
   }
   */
 
-  // Draw controls
-  luv.canvas.draw(controlsImg, 0, 460);
-
   // Draw lives
   for (var x=1; x<=player.lives; x++) {
     luv.canvas.draw(playerImg, (15*x) + x*3, 55, 0, 0.8, 0.8);
@@ -266,15 +263,6 @@ game.onMousePressed = function(x, y, button) {
         song1.stop();
         paused = true;
       }
-    }
-
-    // Left Button
-    if (bbox(x, y, 1, 1, 0, 460, 50, 40)) {
-      player.x -= 20;
-    } else if (bbox(x, y, 1, 1, 262, 460, 50, 40)) {
-      player.x += 20;
-    } else if (bbox(x, y, 1, 1, 50, 460, 212, 40)) {
-      player.fire();
     }
 
     // Back Button Mouse Pressed
