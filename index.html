@@ -25,25 +25,6 @@
       </center>
     </header>
 <br>
-<center>
-<a href="https://twitter.com/share"><img id="tweeter" src="images/tweeter.png"; style="position:absolute; left:100; top:100;"/></a>
-<script>
-var speed = 80;
-var currspeed = "+=" + speed;
-var doStuff = function() {
-  if ($("#tweeter").position().left >= 900) {
-    currspeed = "-=" + speed;
-  } else if ($("#tweeter").position().left <= 200) {
-    currspeed = "+=" + speed;
-  }
-  $("#tweeter").animate({
-    left: currspeed
-  });
-};
-
-setInterval(doStuff, 1000);
-</script>
-</center>
 </div>
 </body>
 </html>
