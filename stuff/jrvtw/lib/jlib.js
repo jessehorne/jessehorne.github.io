@@ -90,13 +90,17 @@ var newImage = function(path, ix, iy) {
   return imageObj;
 }
 
-var drawSprite = function(obj, x, y, tx, ty, s) {
+var drawSprite = function(obj, x, y, tx, ty, s, dir) {
   var w = (obj.tileW * tx);
   var h = (obj.tileH * ty);
   var w2 = obj.tileW * s;
   var h2 = obj.tileH * s;
 
-  ctx.drawImage(obj, w - obj.tileW, h - obj.tileH, obj.tileW, obj.tileH, x, y, w2, h2);
+  if (dir == "left") {
+    ctx.drawImage(obj, w - obj.tileW, h - obj.tileH, obj.tileW, obj.tileH, x, y, w2, h2);
+  } else if (dir == "right") {
+    ctx.drawImage(obj, w - obj.tileW, h - obj.tileH, obj.tileW, obj.tileH, x, y, w2, h2);
+  }
 }
 
 window.addEventListener("keydown", handleKeyDown);

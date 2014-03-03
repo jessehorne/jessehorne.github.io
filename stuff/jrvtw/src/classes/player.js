@@ -10,6 +10,7 @@ var Player = function() {
   this.attackCounter = 0;
   this.canAttack = true;
   this.moveMode = "standing";
+  this.direction = "right";
 
   this.update = function(dt) {
     // console.log(keysDown.join());
@@ -33,6 +34,7 @@ var Player = function() {
     }
 
     if (keyDown(68)) { // Move Right
+      this.direction = "right";
       if (this.moveMode != "crouching") {
         if (this.canAttack != false) {
           this.x += this.speed * dt;
@@ -43,6 +45,7 @@ var Player = function() {
     }
 
     if (keyDown(65)) { // Move Left
+      this.direction = "left";
       if (this.moveMode != "crouching") {
         if (this.canAttack != false) {
           this.x -= this.speed * dt;
@@ -64,8 +67,9 @@ var Player = function() {
       this.attackCounter += dt;
     }
 
-    if (this.attackCounter > 0.7) {
+    if (this.attackCounter > 0.4) {
       this.canAttack = true;
+      this.attackCounter = 0;
     }
 
     // Player doesn't need to go off screen!
@@ -79,17 +83,17 @@ var Player = function() {
 
   this.draw = function() {
     if (this.moveMode == "standing") {
-      drawSprite(this.img, this.x, this.y, 1, 1, 1);
+      drawSprite(this.img, this.x, this.y, 1, 1, 1, this.direction);
     } else if (this.moveMode == "walking") {
-      drawSprite(this.img, this.x, this.y, Math.floor(this.moveCounter), 1, 1);
+      drawSprite(this.img, this.x, this.y, Math.floor(this.moveCounter), 1, 1, this.direction);
     } else if (this.moveMode == "crouching") {
-      drawSprite(this.img, this.x, this.y, 10, 1, 1);
+      drawSprite(this.img, this.x, this.y, 10, 1, 1, this.direction);
     } else if (this.moveMode == "slamming") {
-      drawSprite(this.img, this.x, this.y, 3, 3, 1);
+      drawSprite(this.img, this.x, this.y, 3, 3, 1, this.direction);
     } else if (this.moveMode == "punching") {
-      drawSprite(this.img, this.x, this.y, 9, 3, 1);
+      drawSprite(this.img, this.x, this.y, 9, 3, 1, this.direction);
     } else if (this.moveMode == "kicking") {
-      drawSprite(this.img, this.x, this.y, 10, 3, 1);
+      drawSprite(this.img, this.x, this.y, 10, 3, 1, this.direction);
     }
   }
 

@@ -1,18 +1,18 @@
 game = [];
 
-// Tables that hold things
-entities = [];
-
-// Some variables
-LEVEL = 1;
-
 // load levels
 levels[1] = newImage("assets/levels/level1.png");
 
-// Player init
-player1 = new Player();
-
 game.update = function(dt) {
+  // Handle ROUND - X
+  if (NEWGAME) {
+    newGameCounter += dt;
+
+    if (newGameCounter > 3) {
+      NEWGAME = false;
+    }
+  }
+
   // Update Entities
   for (var i=0; i<entities.length; i++) {
     entities[i].update(dt);
@@ -32,6 +32,11 @@ game.draw = function() {
   // Draw Entities
   for (var i=0; i<entities.length; i++) {
     entities[i].draw();
+  }
+
+  if (NEWGAME) {
+    setColor("#FFFFFF")
+    print(newGameText, 100, 100);
   }
 
   // drawSprite(playerImg, 0, 0, 1, 1, 2);
