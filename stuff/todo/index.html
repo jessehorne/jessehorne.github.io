@@ -5,11 +5,11 @@
   <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
   <script type="text/javascript" src="todo.js"></script>
   
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="todo.css">
 </head>
 <body>
-  <div class="center-block" ng-controller="TodoCtrl">
+  <div class="col-md-6" ng-controller="TodoCtrl">
     <h2>Total todos: {{getTotalTodos()}}</h2>
     <ul class="list-unstyled">
       <li ng-repeat="todo in todos">
