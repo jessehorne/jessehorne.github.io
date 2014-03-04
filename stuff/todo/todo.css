@@ -1,0 +1,24 @@
+
+body {
+  background-image: url("assets/pattern.png");
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color:#C0C0C0;
+}
+
+.done-false {
+  text-decoration: none;
+  color:#C0C0C0;
+}
+
+h2 {
+  color:#C0C0C0;
+}
