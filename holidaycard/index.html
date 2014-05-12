@@ -1,0 +1,64 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Holiday Card Sender</title>
+	<link rel="stylesheet" type="text/css" href="./css/hcs.css">
+</head>
+<body background="./assets/shattered.png">
+	<!-- Header -->
+	<div id="header">
+		<img src="./assets/logo.png" alt="HCS Logo" id="logo" width="100%"/>
+	</div>
+	<br />
+	<!-- Body -->
+	<div class="styled-select">
+		<select id="hcs-select">
+			<option value="null">Select ...</option>
+			<option value="NewYears">New Year's</option>
+			<option value="Valentines">Valentines Day</option>
+			<option value="StPatricks">St. Patrick's Day</option>
+			<option value="AprilFools">April Fools</option>
+			<option value="Easter">Easter</option>
+			<option value="MothersDay">Mother's Day</option>
+			<option value="FathersDay">Father's Day</option>
+			<option value="Independence">Independence Day</option>
+			<option value="VeteransDay">Veteran's Day</option>
+			<option value="Thanksgiving">Thanksgiving</option>
+			<option value="Christmas">Christmas</option>
+		</select>
+	</div>
+	<br />
+	<div class="styled-input">
+		<input type="text" value="Your message" id="hcs-message">
+	</div>
+
+	<br />
+	<div class="styled-input">
+		<input type="text" value="Receiver" id="hcs-receiver">
+	</div>
+	<br />
+	<div class="styled-send">
+		<input type="button" value="Send" onclick="hcs_send();">
+	</div>
+	<br />
+	<!-- Footer -->
+
+	<div id="share-buttons" align="center">
+		 
+		<!-- Facebook -->
+		<a href="http://www.facebook.com/sharer.php?u=http://jessehorne.github.io/holidaycard" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
+		 
+		<!-- Twitter -->
+		<a href="http://twitter.com/share?url=http://jessehorne.github.io/holidaycard&text=Holiday Card Sender" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
+		 
+		<!-- Google+ -->
+		<a href="https://plus.google.com/share?url=http://jessehorne.github.io/holidaycard" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a>
+		 
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/hcs.js"></script>
+</body>
+</html>

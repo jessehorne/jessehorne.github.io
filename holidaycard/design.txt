@@ -1,0 +1,18 @@
+Main
+	Title
+	Menu
+		Select your Holiday
+			New Year's
+			Valentines Day
+			St. Patrick's Day
+			April Fool's Day
+			Easter
+			Mothers Day
+			Fathers Day
+			Independence Day
+			Veterans Day
+			Thanksgiving
+			Christmas
+		Type your note
+		Receiver
+		Send button
