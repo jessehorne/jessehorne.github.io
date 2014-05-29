@@ -41,3 +41,7 @@ function replaceAll(find, replace, str) {
 function saveList() {
 	localStorage["todo-items"] = document.getElementById("list").innerHTML;
 }
+
+function clearToDo() {
+	localStorage["todo-items"] = "";
+}
