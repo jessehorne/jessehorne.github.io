@@ -13,6 +13,8 @@ function loadToDo() {
 	console.log("test");
 	if (typeof localStorage["todo-items"] !== "undefined") {
 		document.getElementById("list").innerHTML = localStorage["todo-items"];
+	} else {
+		document.getElementById("list").innerHTML = "";
 	}
 }
 
