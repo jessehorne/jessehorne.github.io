@@ -1,0 +1,26 @@
+.uk-navbar {
+	background-color: #F0F0F0;
+}
+
+.uk-icon-times {
+	color: #444444;
+	position: relative;
+	margin-bottom: 15px;
+	margin-top: -50px;
+
+}
+
+.uk-icon-plus {
+	color: #444444;
+	position: relative;
+	margin-top: -15px;
+}
+
+.uk-text-large {
+	font-size: 25px;
+}
+
+.uk-icon-coffee {
+	margin-right: -15px;
+	margin-top: -30px;
+}

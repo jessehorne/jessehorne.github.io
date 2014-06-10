@@ -1,8 +1,7 @@
 
 var itemText = "<tr id='ITEMITEMID'>\
-			<td class='uk-width-1-10'>ITEMID</td>\
-			<td class='uk-width-8-10'>ITEMTEXT</td>\
-			<td class='uk-width-1-10'><a class='uk-icon-medium uk-icon-times' onclick=\"deleteItem('ITEMITEMID');\" href=''></a></td>\
+			<td class='uk-width-9-10'>ITEMTEXT</td>\
+			<td class='uk-width-1-10 uk-text-right'><a class='uk-icon-medium uk-icon-times' onclick=\"deleteItem('ITEMITEMID');\" href=''></a></td>\
 			</tr>"
 
 var itemCount = 0;
@@ -53,6 +52,7 @@ function saveList() {
 function clearList() {
 	localStorage["todo-items"] = "";
 	localStorage["todo-count"] = 0;
+	document.getElementById("list").innerHTML = localStorage["todo-items"];
 }
 
 function printTest() {

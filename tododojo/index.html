@@ -3,15 +3,16 @@
 <head>
 	<title>TodoDojo beta</title>
 	<link rel="stylesheet" href="libs/uikit/css/uikit.min.css"/>
+	<link rel="stylesheet" href="./css/tododojo.css"/>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-	<script type="text/javascript" src="./libs/uikit/js/uikit.min.js"></script>\
+	<script type="text/javascript" src="./libs/uikit/js/uikit.min.js"></script>
 	<script type="text/javascript" src="./js/tododojo.js"></script>
 </head>
-<body onload="loadToDo();">
+<body onload="loadToDo();" class="uk-text-large">
 	<!-- Header NavBar -->
 	<nav class="uk-navbar">
 		<ul class="uk-navbar-nav">
-			<li class="uk-active"><a href="">TodoDojo</a></li>
+			<li class="uk-active"><a href="" class=>TodoDojo</a></li>
 			<li class="uk-text-muted">alpha</li>
 		</ul>
 		<div class="uk-navbar-flip">
@@ -25,9 +26,11 @@
 	<table class="uk-table">
 		<thead>
 			<tr>
-				<th class="uk-width-1-10">Id</th>
-				<th class="uk-width-8-10">Item</th>
-				<th class="uk-width-1-10">Delete</th>
+				<th class="uk-width-10-10 uk-text-right"><button class="uk-icon-medium uk-icon-coffee" onclick="clearList();" href=""></button></th>
+			</tr>
+			<tr>
+				<th class="uk-width-9-10">Item</th>
+				<th class="uk-width-1-10 uk-text-right"></th>
 			</tr>
 		</thead>
 		<tbody id="list">
@@ -38,8 +41,8 @@
 	<table class="uk-table">
 		<tbody>
 			<tr>
-				<td class="uk-width-9-10"><input id="textinput" class="uk-width-8-10" type="text" placeholder=""></td>
-				<td class="uk-width-1-10"><button onclick="createItem();" href="">Create</button></td>
+				<td class="uk-width-9-10"><input id="textinput" class="uk-width-9-10" type="text" placeholder=""></td>
+				<td class="uk-width-1-10 uk-text-right"><button class="uk-icon-medium uk-icon-plus" onclick="createItem();" href=""></button></td>
 			</tr>
 		</tbody>
 	</table>
