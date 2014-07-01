@@ -1,0 +1,89 @@
+#4.4
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+R data/mapres/bg_ddr.png
+D data/mapres/generic_lamps.png:data/mapres/generic_lamps.png
+D data/mapres/generic_unhookable_0.7.png:data/mapres/generic_unhookable_0.7.png
+D data/mapres/grass_main_0.7.png:data/mapres/grass_main_0.7.png
+D data/mapres/light.png:data/mapres/light.png
+D data/mapres/moon_0.7.png:data/mapres/moon_0.7.png
+D data/skins/chera.png:data/skins/chera.png
+D data/skins/draw.png:data/skins/draw.png
+D data/skins/00Zed.png:data/skins/00Zed.png
+#4.3.1
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+D data/editor/front.png:data/editor/front.png
+D data/editor/entities.png:data/editor/entities.png
+D data/editor/entities_clear.png:data/editor/entities_clear.png
+#4.3
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+#4.2
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+D data/skins/0011hvad.png:data/skins/0011hvad.png
+D data/skins/00Aoe4leg.png:data/skins/00Aoe4leg.png
+D data/skins/00Bossk.png:data/skins/00Bossk.png
+D data/skins/00MrAppendixX.png:data/skins/00MrAppendixX.png
+D data/skins/00Nealson.png:data/skins/00Nealson.png
+D data/skins/00destiN.png:data/skins/00destiN.png
+D data/skins/fuzzy_coala.png:data/skins/fuzzy_coala.png
+#4.1
+@ UPDATE_CLIENT
+#4.0
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+#3.9.6
+@ UPDATE_CLIENT
+#3.9.5
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+D data/skins/00Amol.png:data/skins/00Amol.png
+D data/skins/00Yamado.png:data/skins/00Yamado.png
+D data/skins/ts2_contest_skin.png:data/skins/ts2_contest_skin.png
+#3.9.4
+@ UPDATE_CLIENT
+#3.9.3
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+#3.9.2
+@ UPDATE_CLIENT
+#3.9.1
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+#3.9
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+D data/skins/00Bibo.png:data/skins/00Bibo.png
+D data/skins/00Bossk.png:data/skins/00Bossk.png
+#3.8.3
+@ UPDATE_CLIENT
+#3.8.2
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+#3.8.1
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+#3.8
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+D data/arrow.png:data/arrow.png
+#3.7.3
+@ UPDATE_CLIENT
+#3.7.2
+@ UPDATE_CLIENT
+#3.7.1
+@ UPDATE_CLIENT
+#3.7
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+D data/skins/DuMoH.png:data/skins/DuMoH.png
+#3.6
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+#3.5
+@ UPDATE_CLIENT
+@ UPDATE_SERVER
+D data/mapres/ddnet-tiles.png:data/mapres/ddnet-tiles.png
+#3.4
