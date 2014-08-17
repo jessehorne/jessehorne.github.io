@@ -60,11 +60,13 @@ var createBoard = function() {
 		buttons[buttons.length-1] = document.createElement("button");
 		buttons[buttons.length-1].id = "button" + (i+1);
 		buttons[buttons.length-1].boardId = i;
-		buttons[buttons.length-1].innerHTML = ".";
+		buttons[buttons.length-1].used = "no";
+		buttons[buttons.length-1].innerHTML = "";
 		buttons[buttons.length-1].setAttribute("class", "square");
 		buttons[buttons.length-1].addEventListener("click", function() {
 			move(this.id, this.boardId);
 		}, false);
+
 		gameArea.appendChild(buttons[buttons.length-1]);
 		// button.onClick = move();
 		if (counter === 3) { 
@@ -108,10 +110,12 @@ var restartGame = function() {
 
 var handleTurns = function(x) {
 	if (playerTurn === 1) {
-		document.getElementById("gameturn").innerHTML = "Player 2's Turn!";
+		document.getElementById("gameplayer1").style["color"] = "#FF9999";
+		document.getElementById("gameplayer2").style["color"] = "#0000FF";
 		playerTurn = 2;
 	} else if (playerTurn === 2) {
-		document.getElementById("gameturn").innerHTML = "Player 1's Turn!";
+		document.getElementById("gameplayer1").style["color"] = "#FF0000";
+		document.getElementById("gameplayer2").style["color"] = "#CACAFF";
 		playerTurn = 1;
 	}
 }
@@ -120,14 +124,23 @@ var move = function(id, number) {
 
 	// Handle placing x's and o's
 	if (canMove === true) {
+		console.log(number);
 		var elem = document.getElementById(id);
-		if (elem.innerHTML === ".") {
+		if (elem.used === "no") {
 			if (playerTurn === 1) {
 				board[number] = -1;
-				elem.innerHTML = "O";
+				elem.classList.add("fa");
+				elem.classList.add("fa-circle-o");
+				elem.classList.add("fa-4x");
+				elem.style["color"] = "#FF9999";
+				elem.used = "yes";
 			} else if (playerTurn === 2) {
 				board[number] = 1;
-				elem.innerHTML = "X";
+				elem.classList.add("fa");
+				elem.classList.add("fa-times");
+				elem.classList.add("fa-4x");
+				elem.style["color"] = "#8080FF";
+				elem.used = "yes";
 			}
 			handleTurns(id);
 		}
@@ -144,8 +157,10 @@ var winner = function(winner) {
 	canMove = false;
 	if (winner === 1) {
 		document.getElementById("gamewinner").innerHTML = "Player 1 Wins!";
+		document.getElementById("gameplayer1").style["color"] = "#FFFF00";
 	} else if (winner === 2) {
 		document.getElementById("gamewinner").innerHTML = "Player 2 Wins!";
+		document.getElementById("gameplayer2").style["color"] = "#FFFF00";
 	}
 }
 
