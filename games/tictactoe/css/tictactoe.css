@@ -1,0 +1,15 @@
+.square {
+	background: transparent;
+	border: none;
+	height: 100px;
+	width: 100px;
+	outline: none;
+	position: relative;
+	padding: 0;
+}
+
+.square:hover {
+	background-color: #ddd;
+	padding: 2px;
+}
+
