@@ -7,7 +7,7 @@ canvas.height = window.innerHeight-250;
 var circleX = 100;
 var circleY = 100;
 var circleRadius = 10;
-var circleSpeed = 80;
+var circleSpeed = 180;
 var circleXVel = circleSpeed;
 var circleYVel = -circleSpeed;
 
