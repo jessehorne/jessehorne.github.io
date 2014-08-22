@@ -33,6 +33,7 @@ html, body {
 
 .fcss-m {
 	font-size: 25px;
+	border-radius: 5px;
 }
 
 .fcss-center {
@@ -73,7 +74,6 @@ html, body {
 .fcss-menu a:hover {
 	transition: .5s;
 	background-color: rgba(204,204,204,0.5);
-	border: none;
 }
 
 .fcss-menu a:active {
@@ -99,5 +99,13 @@ html, body {
 }
 
 #pong-ball {
+	position: absolute;
+}
+
+#pong-paddle-1 {
+	position: absolute;
+}
+
+#pong-paddle-2 {
 	position: absolute;
 }
