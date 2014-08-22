@@ -1,19 +1,27 @@
-var canvas = document.getElementById("pong-canvas");
-var context = canvas.getContext('2d');
+var canvas = document.getElementById("fcss-pong");
 
-canvas.width = window.innerWidth-25;
-canvas.height = window.innerHeight-250;
-
-var circleX = 100;
-var circleY = 100;
-var circleRadius = 10;
 var circleSpeed = 180;
-var circleXVel = circleSpeed;
-var circleYVel = -circleSpeed;
+
+var ball = document.getElementById("pong-ball");
+ball.posX = 100;
+ball.posY = 100;
+ball.posXVel = circleSpeed;
+ball.posYVel = -circleSpeed;
 
 // Timer Stuff
 var now = new Date().getTime();
 var oldNow = now;
+
+var getPos = function(elem) {
+	if (elem) {
+		return [elem.offsetLeft, elem.offsetTop];
+	}
+}
+
+var updateBallPos = function() {
+	ball.style.left = ball.posX + "px";
+	ball.style.top = ball.posY + "px";
+}
 
 var drawCircle = function(ctx, radius, x, y) {
 	ctx.beginPath();
@@ -22,40 +30,47 @@ var drawCircle = function(ctx, radius, x, y) {
 	ctx.fill();
 }
 
-drawCircle(context, circleRadius, 100, 100);
+var pxToNumber = function(x) {
+	x = x.replace("px", "");
+	return parseInt(x);
+}
+
+// drawCircle(context, circleRadius, 100, 100);
+window.setTimeout(gameloop, 1000 / 60);
 
 var gameloop = function() {
 	window.requestAnimationFrame(gameloop);
 	now = new Date().getTime();
 	dt = (now - oldNow)/1000;
+	updateBallPos();
 
-	context.clearRect(0, 0, canvas.width, canvas.height);
-	drawCircle(context, circleRadius, circleX, circleY);
+	// context.clearRect(0, 0, canvas.width, canvas.height);
+	// drawCircle(context, circleRadius, ball.posX, ball.posY);
 
-	oldCircleX = circleX;
-	oldCircleY = circleY;
-	circleX += circleXVel * dt;
-	circleY += circleYVel * dt;
+	ball.oldPosX = ball.posX;
+	ball.oldPosY = ball.posY;
+	ball.posX += ball.posXVel * dt;
+	ball.posY += ball.posYVel * dt;
 
 	// Circle Physics
-	if (circleY <= 0) {
-		circleYVel = -circleYVel;
-		circleX = oldCircleX;
-		circleY = oldCircleY;
-	} else if (circleY >= canvas.height) {
-		circleYVel = -circleYVel;
-		circleX = oldCircleX;
-		circleY = oldCircleY;
+	if (ball.posY <= -10) {
+		ball.posYVel = -ball.posYVel;
+		ball.posX = ball.oldPosX;
+		ball.posY = ball.oldPosY;
+	} else if (ball.posY >= canvas.offsetHeight-10) {
+		ball.posYVel = -ball.posYVel;
+		ball.posX = ball.oldPosX;
+		ball.posY = ball.oldPosY;
 	}
 
-	if (circleX <= 0) {
-		circleXVel = -circleXVel;
-		circleX = oldCircleX;
-		circleY = oldCircleY;
-	} else if (circleX >= canvas.width) {
-		circleXVel = -circleXVel;
-		circleX = oldCircleX;
-		circleY = oldCircleY;
+	if (ball.posX <= -10) {
+		ball.posXVel = -ball.posXVel;
+		ball.posX = ball.oldPosX;
+		ball.posY = ball.oldPosY;
+	} else if (ball.posX >= canvas.offsetWidth-10) {
+		ball.posXVel = -ball.posXVel;
+		ball.posX = ball.oldPosX;
+		ball.posY = ball.oldPosY;
 	}
 
 	oldNow = now;
