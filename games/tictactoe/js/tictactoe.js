@@ -157,10 +157,10 @@ var winner = function(winner) {
 	canMove = false;
 	if (winner === 1) {
 		document.getElementById("gamewinner").innerHTML = "Player 1 Wins!";
-		document.getElementById("gameplayer1").style["color"] = "#FFFF00";
+		document.getElementById("gameplayer1").style["color"] = "#FFFF66";
 	} else if (winner === 2) {
 		document.getElementById("gamewinner").innerHTML = "Player 2 Wins!";
-		document.getElementById("gameplayer2").style["color"] = "#FFFF00";
+		document.getElementById("gameplayer2").style["color"] = "#FFFF66";
 	}
 }
 
