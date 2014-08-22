@@ -1,0 +1,87 @@
+@font-face {
+	font-family: "LGR";
+	src: url(lgr.otf);
+}
+
+.fcss-lgr-font {
+	font-family: "LGR";
+	letter-spacing: 3px;
+}
+
+.fcss-header {
+	width: 100%;
+	height: 25%;
+}
+
+.fcss-xl {
+	font-size: 64px;
+}
+
+.fcss-l {
+	font-size: 32px;
+}
+
+.fcss-m {
+	font-size: 25px;
+}
+
+.fcss-center {
+	text-align: center;
+}
+
+.fcss-portfolio-card {
+	position: relative;
+	display: block;
+	background-color: rgba(204,204,204,0.5);
+	width: 50%;
+	opacity: 2;
+	border-radius: 5px;
+	float: left;
+}
+
+.fcss-color-email {
+	color: #FF7070;
+}
+
+.fcss-menu {
+	width: 50%;
+	position: relative;
+	margin-top: 50px;
+	float: left;
+	margin-top: 95px;
+	margin-left: -30px;
+	text-align: center;
+}
+
+.fcss-menu a {
+	text-decoration: none;
+	color: #000000;
+	transition: .5s;
+	border-bottom: 1px solid;
+}
+
+.fcss-menu a:hover {
+	transition: .5s;
+	background-color: rgba(204,204,204,0.5);
+	border: none;
+}
+
+.fcss-menu a:active {
+	margin-top: 55px;
+	color: green;
+}
+
+.fcss-menu li {
+	list-style-type: none;
+	margin-top: 10px;
+	display: inline;
+	padding: 20px;
+}
+
+.fcss-pong {
+	position: relative;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	background-color: grey;
+	height: 100%;
+}
