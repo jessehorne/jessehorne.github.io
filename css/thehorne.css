@@ -36,6 +36,11 @@ html, body {
 	border-radius: 5px;
 }
 
+.fcss-m {
+	font-size: 18px;
+	border-radius: 5px;
+}
+
 .fcss-center {
 	text-align: center;
 }
