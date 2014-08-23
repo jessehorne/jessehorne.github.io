@@ -118,3 +118,13 @@ html, body {
 #pong-paddle-2 {
 	position: absolute;
 }
+
+.fcss-game-link {
+	background-color: #A3A3A3;
+	border-radius: 5px;
+}
+
+.fcss-game-link:hover {
+	background-color: #333333;
+	border-radius: 5px;
+}
