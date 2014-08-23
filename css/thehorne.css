@@ -125,5 +125,6 @@ html, body {
 }
 
 .fcss-game-link:hover {
-	color: #CCCCCC;
+	transition: .5s;
+	color: #EEEEEE;
 }
