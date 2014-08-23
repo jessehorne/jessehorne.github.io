@@ -6,6 +6,14 @@
 	<link rel="stylesheet" href="./css/font-awesome.css">
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div align="center">
 <h2>Tic Tac Toe v1</h2>
 <h3 id="gameturn"></h3>
@@ -16,6 +24,7 @@
 <br/>
 <a class="gamerestarttext" href="" >Restart</a>
 <script src="./js/tictactoe.js"></script>
+<div class="fb-like" data-href="http://thehorne.com/games/tictactoe" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 <p id="linkhome" style="font-size: 12px"><a href="http://www.thehorne.com">www.thehorne.com</a></p>
 </div>
 </body>
