@@ -120,6 +120,7 @@ html, body {
 }
 
 .fcss-game-link {
+	transition: .5s;
 	text-decoration: none;
 	color: #000000;
 }
