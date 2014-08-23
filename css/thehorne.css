@@ -25,20 +25,24 @@ html, body {
 
 .fcss-xl {
 	font-size: 64px;
+	letter-spacing: 3px;
 }
 
 .fcss-l {
 	font-size: 32px;
+	letter-spacing: 3px;
 }
 
 .fcss-m {
 	font-size: 25px;
 	border-radius: 5px;
+	letter-spacing: 3px;
 }
 
 .fcss-s {
 	font-size: 18px;
 	border-radius: 5px;
+	letter-spacing: 1px;
 }
 
 .fcss-center {
