@@ -1,0 +1,14 @@
+
+
+.gm-screen {
+	width: 100%;
+	height: 100%;
+}
+
+.gm-square {
+	width: 45px;
+	height: 45px;
+	border: 1px solid #ccc;
+	background-color: #AAAAAA;
+	float: left;
+}
