@@ -34,9 +34,7 @@ html, body {
 }
 
 .fcss-m {
-	margin-top: 30px;
-	font-size: 30px;
-	font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 25px;
 	border-radius: 5px;
 	letter-spacing: 3px;
 }
@@ -130,4 +128,10 @@ html, body {
 .fcss-game-link:hover {
 	transition: .5s;
 	color: #808080;
+}
+
+#html-stuff {
+	font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size: 25px;
+	margin-top: 30px;
 }
