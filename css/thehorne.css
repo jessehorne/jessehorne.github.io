@@ -34,7 +34,9 @@ html, body {
 }
 
 .fcss-m {
-	font-size: 25px;
+	margin-top: 30px;
+	font-size: 30px;
+	font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
 	border-radius: 5px;
 	letter-spacing: 3px;
 }
