@@ -3,8 +3,8 @@ $(document).ready( function() {
 		$("#html-stuff").load("./pages/aboutme.html");
 	});
 
-	$("#portfolio").on("click", function() {
-		$("#html-stuff").load("./pages/portfolio.html");
+	$("#goals").on("click", function() {
+		$("#html-stuff").load("./pages/goals.html");
 	});
 
 	$("#games").on("click", function() {
