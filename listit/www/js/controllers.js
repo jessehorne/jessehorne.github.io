@@ -30,11 +30,9 @@ angular.module("starter.controllers", ["ionic"])
 			data.newItem = '';
 			$scope.closeModal();
 			$scope.SaveList();
-			console.log(JSON.stringify($scope.ListItItems));
 		};
 
 		$scope.SaveList = function() {
-			$scope.ListItItems.splice($scope.ListItItems.length - 1, 1);
 			window.localStorage["ListItItems"] = JSON.stringify($scope.ListItItems);
 		};
 	});
