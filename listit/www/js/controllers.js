@@ -23,6 +23,7 @@ angular.module("starter.controllers", ["ionic"])
 		});
 
 		$scope.AddItem = function(data) {
+			console.log(data.newItem);
 			$scope.ListItItems.push({
 				task: data.newItem,
 				status: "not done"
