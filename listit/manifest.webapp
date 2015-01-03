@@ -1,0 +1,30 @@
+{
+  "version": "0.1",
+  "name": "List It",
+  "description": "A free to do application built using the Ionic Framework.",
+  "launch_path": "/www/index.html",
+  "icons": {
+    "16": "/www/Pencil-16.png",
+    "48": "/www/Pencil-48.png",
+    "128": "/www/Pencil-128.png"
+  },
+  "developer": {
+    "name": "Jesse Horne",
+    "url": "http://thehorne.com/"
+  },
+  "locales": {
+    "es": {
+      "description": "Su nueva aplicación impresionante List It",
+      "developer": {
+        "url": "http://thehorne.com/"
+      }
+    },
+    "it": {
+      "description": "La tua nuova fantastica List It",
+      "developer": {
+        "url": "http://thehorne.com/"
+      }
+    }
+  },
+  "default_locale": "en"
+}
