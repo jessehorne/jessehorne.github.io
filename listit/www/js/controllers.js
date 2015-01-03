@@ -28,11 +28,12 @@ angular.module("starter.controllers", ["ionic"])
 				status: "not done"
 			});
 			data.newItem = '';
+			$scope.closeModal();
 			$scope.SaveList();
 		};
 
 		$scope.NGSubmit = function() {
-			$scope.closeModal();
+
 		};
 
 		$scope.SaveList = function() {
