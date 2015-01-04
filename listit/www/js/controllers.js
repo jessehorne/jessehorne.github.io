@@ -29,6 +29,12 @@ angular.module("starter.controllers", ["ionic"])
 		});
 
 		$scope.AddItem = function(data) {
+			if ($scope.AddItemCount > 2) {
+				$scope.AddItemCount = 0;
+				$scope.CleanUpItems();
+			} else {
+				$scope.AddItemCount += 1;
+			}
 
 			$scope.ListItItems.push({
 				task: data.newItem,
