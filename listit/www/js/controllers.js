@@ -29,11 +29,11 @@ angular.module("starter.controllers", ["ionic"])
 		});
 
 		$scope.AddItem = function(data) {
+			$scope.AddItemCount += 1;
+
 			if ($scope.AddItemCount === 2) {
 				$scope.AddItemCount = 0;
 				$scope.CleanUpItems();
-			} else {
-				$scope.AddItemCount += 1;
 			}
 
 			$scope.ListItItems.push({
@@ -50,7 +50,7 @@ angular.module("starter.controllers", ["ionic"])
 		};
 
 		$scope.CleanUpItems = function() {
-			$scope.ListItItems.splice($scope.ListItItems.length - 1, 1);
+			$scope.ListItItems.pop();
 		};
 
 		$scope.SaveList = function() {
