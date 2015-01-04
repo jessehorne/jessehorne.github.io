@@ -1,7 +1,9 @@
 angular.module("starter.controllers", ["ionic"])
 	.controller("ListItController", function($scope, $ionicModal) {
 		$scope.ListItItems = JSON.parse(window.localStorage["ListItItems"] ||
-			'[]')
+			'[]');
+
+		$scope.AddItemCount = 0;
 
 		$ionicModal.fromTemplateUrl("modal.html", {
 			scope: $scope,
@@ -21,7 +23,7 @@ angular.module("starter.controllers", ["ionic"])
 		$scope.$on("$destroy", function() {
 			$scope.masdasdodal.remove()
 		});
-		$scope.AddItemCount = 0;
+
 		$scope.AddItem = function(el) {
 			if ($scope.AddItemCount > 2) {
 				$scope.AddItemCount = 0;
