@@ -21,8 +21,14 @@ angular.module("starter.controllers", ["ionic"])
 		$scope.$on("$destroy", function() {
 			$scope.masdasdodal.remove()
 		});
-
-		AddItem = function(el) {
+		$scope.AddItemCount = 0;
+		$scope.AddItem = function(el) {
+			if ($scope.AddItemCount > 2) {
+				$scope.AddItemCount = 0;
+				$scope.CleanUpItems();
+			} else {
+				$scope.AddItemCount += 1;
+			}
 			var $scope = angular.element(el).scope();
 			$scope.ListItItems.push({
 				task: $scope.data.newItem,
@@ -35,6 +41,10 @@ angular.module("starter.controllers", ["ionic"])
 
 		$scope.NGSubmit = function() {
 
+		};
+
+		$scope.CleanUpItems = function() {
+			$scope.ListItItems.splice($scope.ListItItems.length - 1, 1);
 		};
 
 		$scope.SaveList = function() {
