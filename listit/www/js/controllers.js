@@ -22,13 +22,13 @@ angular.module("starter.controllers", ["ionic"])
 			$scope.masdasdodal.remove()
 		});
 
-		$scope.AddItem = function(data) {
-			console.log(data.newItem);
+		AddItem = function(el) {
+			var $scope = angular.element(el).scope();
 			$scope.ListItItems.push({
-				task: data.newItem,
+				task: $scope.data.newItem,
 				status: "not done"
 			});
-			data.newItem = '';
+			$scope.data.newItem = '';
 			$scope.closeModal();
 			$scope.SaveList();
 		};
