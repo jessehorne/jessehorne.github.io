@@ -13,7 +13,7 @@ angular.module("starter.controllers", ["ionic"])
 		});
 
 		$scope.openModal = function() {
-			$scope.modal.show();
+			$sccope.modal.show();
 		};
 
 		$scope.closeModal = function() {
@@ -24,7 +24,7 @@ angular.module("starter.controllers", ["ionic"])
 			$scope.masdasdodal.remove()
 		});
 
-		$scope.AddItem = function(el) {
+		$scope.AddItem = function(data) {
 			if ($scope.AddItemCount > 2) {
 				$scope.AddItemCount = 0;
 				$scope.CleanUpItems();
@@ -32,6 +32,25 @@ angular.module("starter.controllers", ["ionic"])
 				$scope.AddItemCount += 1;
 			}
 			var $scope = angular.element(el).scope();
+			ope.modal.show();
+		};
+
+		$scope.closeModal = function() {
+			$scope.modal.hide();
+		};
+
+		$scope.$on("$destroy", function() {
+			$scope.masdasdodal.remove()
+		});
+
+		$scope.AddItem = function(data) {
+			if ($scope.AddItemCount > 2) {
+				$scope.AddItemCount = 0;
+				$scope.CleanUpItems();
+			} else {
+				$scope.AddItemCount += 1;
+			}
+
 			$scope.ListItItems.push({
 				task: $scope.data.newItem,
 				status: "not done"
