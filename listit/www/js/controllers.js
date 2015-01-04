@@ -13,7 +13,7 @@ angular.module("starter.controllers", ["ionic"])
 		});
 
 		$scope.openModal = function() {
-			$sccope.modal.show();
+			$scope.modal.show();
 		};
 
 		$scope.closeModal = function() {
