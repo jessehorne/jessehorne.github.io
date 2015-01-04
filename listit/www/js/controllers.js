@@ -52,10 +52,10 @@ angular.module("starter.controllers", ["ionic"])
 			}
 
 			$scope.ListItItems.push({
-				task: $scope.data.newItem,
+				task: data.newItem,
 				status: "not done"
 			});
-			$scope.data.newItem = '';
+			data.newItem = '';
 			$scope.closeModal();
 			$scope.SaveList();
 		};
