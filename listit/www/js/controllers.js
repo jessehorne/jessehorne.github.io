@@ -31,11 +31,6 @@ angular.module("starter.controllers", ["ionic"])
 		$scope.AddItem = function(data) {
 			$scope.AddItemCount += 1;
 
-			if ($scope.AddItemCount === 2) {
-				$scope.AddItemCount = 0;
-				$scope.CleanUpItems();
-			}
-
 			$scope.ListItItems.push({
 				task: data.newItem,
 				status: "not done"
@@ -43,6 +38,11 @@ angular.module("starter.controllers", ["ionic"])
 			data.newItem = '';
 			$scope.closeModal();
 			$scope.SaveList();
+
+			if ($scope.AddItemCount === 2) {
+				$scope.AddItemCount = 0;
+				$scope.CleanUpItems();
+			}
 		};
 
 		$scope.NGSubmit = function() {
