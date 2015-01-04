@@ -25,11 +25,11 @@ angular.module("starter.controllers", ["ionic"])
 		};
 
 		$scope.$on("$destroy", function() {
-			$scope.masdasdodal.remove()
+			$scope.model.remove()
 		});
 
 		$scope.AddItem = function(data) {
-			if ($scope.AddItemCount > 2) {
+			if ($scope.AddItemCount === 2) {
 				$scope.AddItemCount = 0;
 				$scope.CleanUpItems();
 			} else {
