@@ -9,7 +9,7 @@ function solve(x) {
   }
 
   while (iterator <= number) {
-    if (x = number % iterator == 0) {
+    if (number % iterator == 0) {
       number = number / iterator;
     } else {
       iterator += 2;
