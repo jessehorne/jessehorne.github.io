@@ -1,29 +1,31 @@
-function solve(x) {
-  var start_time = new Date().getTime() / 1000;
+function solve(number2, iterations) {
+  var total = 0;
 
-  var number = x;
-  var iterator = 3;
+  for (var x = 0; x <= iterations; x++) {
+    var start_time = new Date().getMilliseconds();
 
-  while (number % 2 == 0) {
-    number = number / 2;
-  }
+    var number = number2;
+    var iterator = 3;
 
-  while (iterator <= number) {
-    if (number % iterator == 0) {
-      number = number / iterator;
-    } else {
-      iterator += 2;
+    while (number % 2 == 0) {
+      number = number / 2;
     }
+
+    while (iterator <= number) {
+      if (number % iterator == 0) {
+        number = number / iterator;
+      } else {
+        iterator += 2;
+      }
+    }
+
+    var end_time = new Date().getMilliseconds();
+    total += (end_time - start_time);
   }
 
-  var end_time = new Date().getTime() / 1000;
-  return (end_time - start_time);
+  return total;
 }
 
-var total = 0
-
-for (var x = 1; x <= 10000; x++) {
-  total += solve(600851475143);
-}
+total = solve(600851475143, 10000)
 
 document.getElementById("solution").innerHTML = total;
