@@ -123,6 +123,7 @@ html, body {
 	transition: .5s;
 	text-decoration: none;
 	color: #000000;
+	margin-top: -10px;
 }
 
 .fcss-game-link:hover {
@@ -133,5 +134,5 @@ html, body {
 #html-stuff {
 	font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
 	font-size: 25px;
-	margin-top: 30px;
+	margin-top: 10px;
 }
