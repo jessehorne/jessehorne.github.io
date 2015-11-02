@@ -31,15 +31,15 @@ function prettify() {
         requestAnimationFrame(prettify);
     }, 100);
 
-    var r = Math.floor(Math.random() * 255) / 2;
-    var g = Math.floor(Math.random() * 255) / 2;
-    var b = Math.floor(Math.random() * 255) / 2;
+    var r = Math.floor(Math.random() * 255) + 1;
+    var g = Math.floor(Math.random() * 255) + 1;
+    var b = Math.floor(Math.random() * 255) + 1;
 
     document.getElementById("wat2").style["color"] = "rgb(" + r + "," + g + "," + b + ")";
 
-    var r = Math.floor(Math.random() * 255) / 2;
-    var g = Math.floor(Math.random() * 255) / 2;
-    var b = Math.floor(Math.random() * 255) / 2;
+    var r = Math.floor(Math.random() * 255) + 1;
+    var g = Math.floor(Math.random() * 255) + 1;
+    var b = Math.floor(Math.random() * 255) + 1;
 
     document.getElementById("wat2").style["background-color"] = "rgb(" + r + "," + g + "," + b + ")";
 
