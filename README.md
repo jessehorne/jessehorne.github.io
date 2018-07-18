@@ -1,1 +1,0 @@
-Welcome to my personal sites repository.
