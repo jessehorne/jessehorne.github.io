@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Verdana, sans-serif;
+    background-color: #282828;
+    padding: 100px;
+}
+
+
+div {
+    margin: 0;
+    width: 60%;
+    color: white;
+}
+
+.title {
+    font-size: 64px;
+    padding-bottom: 0;
+}
+
+.jesse {
+    color: #19F7D2;
+}
+
+.links {
+    font-size: 32px;
+}
