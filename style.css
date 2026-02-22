@@ -5,27 +5,23 @@ html, body {
     height: 100%;
     font-family: Verdana, sans-serif;
     background-color: #282828;
-}
-
-.container {
-    padding: 100px;
-}
-
-div {
-    margin: 0;
-    width: 80%;
     color: white;
 }
 
-.title {
-    font-size: 64px;
-    padding-bottom: 0;
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding-top: 40px;
 }
 
-.jesse {
-    color: #19F7D2;
+.container .title {
+    font-size: 48px;
 }
 
-.links {
-    font-size: 32px;
+a {
+    color: cyan;
+}
+
+div {
+    margin: 20px;
 }
